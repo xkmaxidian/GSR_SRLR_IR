@@ -1,0 +1,102 @@
+function [Par] = Par_Set(nSig)
+
+Par.nSig = nSig;
+Par.Iter = 100;
+
+if nSig <= 30
+    Par.step = 3;
+else
+    Par.step = 4;
+end
+
+if nSig <= 5
+    Par.gamma = 0.1;
+    Par.lamada = 1;
+    Par.patch = 7;
+    Par.Sim = 50;
+    Par.omega = 2;
+    Par.tau = 2.5E3;
+    Par.c1 = 2;
+    Par.c2 = 2;
+    Par.p = 0.8;
+    Par.Error = 0.0002;
+elseif nSig <= 10
+    Par.gamma = 0.1;
+    Par.lamada = 0.5;
+    Par.patch = 7;
+    Par.Sim = 50;
+    Par.omega = 2;
+    Par.tau = 1.5E3;
+    Par.c1 = 2;
+    Par.c2 = 1;
+    Par.p = 0.8;
+    Par.Error = 0.0002;
+elseif nSig <= 20
+    Par.gamma = 0.2;
+    Par.lamada = 0.4;
+    Par.patch = 7;
+    Par.Sim = 60;
+    Par.omega = 2;
+    Par.tau = 3E3;
+    Par.c1 = 2;
+    Par.c2 = 1;
+    Par.p = 0.8;
+    Par.Error = 0.00013;
+elseif nSig <= 30
+    Par.gamma = 0.1;
+    Par.lamada = 0.3;
+    Par.patch = 7;
+    Par.Sim = 60;
+    Par.omega = 2;
+    Par.tau = 2.8E3;
+    Par.c1 = 2;
+    Par.c2 = 2;
+    Par.p = 0.8;
+    Par.Error = 0.00035;
+elseif nSig <= 40
+    Par.gamma = 0.1;
+    Par.lamada = 0.3;
+    Par.patch = 8;
+    Par.Sim = 70;
+    Par.omega = 2;
+    Par.tau = 5E3;
+    Par.c1 = 2;
+    Par.c2 = 2;
+    Par.p = 0.85;
+    Par.Error = 0.0004;
+elseif nSig <= 50
+    Par.gamma = 0.1;
+    Par.lamada = 0.3;
+    Par.patch = 8;
+    Par.Sim = 80;
+    Par.omega = 2;
+    Par.tau = 6E3;
+    Par.c1 = 2;
+    Par.c2 = 1;
+    Par.p = 0.9;
+    Par.Error = 0.0005;
+elseif nSig <= 75
+    Par.gamma = 0.1;
+    Par.lamada = 0.3;
+    Par.patch = 9;
+    Par.Sim = 90;
+    Par.omega = 2;
+    Par.tau = 15E3;
+    Par.c1 = 2;
+    Par.c2 = 0.7;
+    Par.p = 0.9;
+    Par.Error = 0.0008;
+else
+    Par.gamma = 0.1;
+    Par.lamada = 0.3;
+    Par.patch = 9;
+    Par.Sim = 100;
+    Par.omega = 2;
+    Par.tau = 35E3;
+    Par.c1 = 2;
+    Par.c2 = 1;
+    Par.p = 0.9;
+    Par.Error = 0.0003;
+end
+
+end
